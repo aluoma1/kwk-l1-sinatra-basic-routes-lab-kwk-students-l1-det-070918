@@ -1,10 +1,23 @@
-# require_relative 'config/environment'
+ require_relative 'config/environment'
 
-# class App < Sinatra::Base
-#   get '/'do 
-#     "Hello World"
+ class App < Sinatra::Base
+   get '/'do 
+     "Hello World"
+ end
+ 
+ get '/name' do 
+   "My name is _"
+ end 
+ 
+ get '/hometown' do 
+   "My hometown is __"
+ end 
+ 
+ get '/favorite-song' do
+   "My favorite song is _"
+ end 
+ end 
+# get '/hello/:id' do 
+#   @name = params[:id]
+#   "Hello #{@name}!"
 # end
-get '/hello/:id' do 
-  @name = params[:id]
-  "Hello #{@name}!"
-end
